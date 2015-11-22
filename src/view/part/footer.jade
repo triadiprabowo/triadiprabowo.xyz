@@ -1,0 +1,27 @@
+section.content-wrapper#footer
+	div.block-masking
+	div.block-50
+		canvas#world
+	div.block-50#contact
+		div.content-inner
+			img.title(src='./public/img/contact-icon.png', width='40', height='40')
+			h1.title='Contact Me!'
+
+			div.form-input
+				label='Full Name'
+				input(type='text', id='f_fullname', placeholder='Your Full Name (e.g. John Constantine)')
+
+				label='Email Address'
+				input(type='email', id='f_email', placeholder='Your Email Address (e.g. me@email.com)')
+
+				label='Message'
+				textarea#f_msgbody(placeholder='Tell me, what do you need from me?')
+
+				button#btn-submit-contact='Send'
+	span.separator
+	p.copyright!='&copy; 2015 Triadi Prabowo at triadiprabowo.xyz, all rights reserved.'
+
+// Input javascript sources
+script(src='./public/js/matrix-anim.js')
+script(src='./public/js/trail-canvas-effect.js')
+script(src='./public/js/controller.js')

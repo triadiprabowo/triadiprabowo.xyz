@@ -1,0 +1,32 @@
+{
+  "name": "triadiprabowo.xyz",
+  "version": "1.0.0",
+  "description": "Personal website of Triadi Prabowo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/triadiprabowo/triadiprabowo.xyz.git"
+  },
+  "keywords": [
+    "personal",
+    "website",
+    "triadi",
+    "prabowo"
+  ],
+  "author": "Triadi Prabowo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/triadiprabowo/triadiprabowo.xyz/issues"
+  },
+  "homepage": "https://github.com/triadiprabowo/triadiprabowo.xyz#readme",
+  "dependencies": {
+    "compression": "^1.6.0",
+    "express": "^4.13.3",
+    "forever": "^0.15.1",
+    "forever-monitor": "^1.7.0",
+    "jade": "^1.11.0"
+  }
+}
