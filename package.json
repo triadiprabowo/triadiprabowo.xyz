@@ -23,10 +23,13 @@
   },
   "homepage": "https://github.com/triadiprabowo/triadiprabowo.xyz#readme",
   "dependencies": {
+    "body-parser": "^1.14.1",
     "compression": "^1.6.0",
+    "emailjs": "^1.0.1",
     "express": "^4.13.3",
     "forever": "^0.15.1",
     "forever-monitor": "^1.7.0",
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "validator": "^4.3.0"
   }
 }

@@ -167,7 +167,7 @@ p, pre {
 .navlinks li {
 	font-family: 'Lora', serif;
 	position: relative;
-	font-size: 21px;
+	font-size: 18px;
 	color: #fff;
 	display: inline-block;
 	padding: 0 10px;
@@ -354,9 +354,22 @@ img.title {
 
 .content-wrapper#biography .content-inner p {
 	color: #ccc;
+	text-align: left;
+}
+
+.content-wrapper#portfolio {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	background: #E5E5E5;
+}
+
+.content-wrapper#portfolio .content-inner h1 {
+	border-bottom: 3px dashed rgba(0,0,0,.1);
 }
 
 .content-wrapper#footer {
+	position: relative;	
 	background: #000;
 	padding: 0;		
 	overflow: hidden;
@@ -368,6 +381,29 @@ img.title {
 	height: 100%;
 	z-index: 8;
 }
+
+.clearfloat {
+	clear: both;
+}
+
+.block-25 {
+	position: relative;
+	width: 23%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;	
+	display: inline-block;
+}
+
+.block-img img {
+	width: 100%;
+	height: auto;
+}
+
+.m-2p {
+	margin: 1% 0 2% 2%;
+}
+
 .block-50 {
 	position: relative;
 	width: 100%;
@@ -397,6 +433,26 @@ img.title {
 .block-50#contact h1 {
 	color: #fff;
 	padding: 10px;
+}
+
+/* Portfolio Blok Config */
+.content-wrapper#portfolio .content-inner .block-25 {
+	vertical-align: top;
+}
+
+.content-wrapper#portfolio .content-inner .block-25 .block-img {
+	cursor: pointer;
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
+}
+
+.content-wrapper#portfolio .content-inner .block-25 h4, p {
+	text-align: center;	
+}
+
+.content-wrapper#portfolio .content-inner .block-25 .block-img:hover {
+	background: rgba(0,0,0,.025);
 }
 
 /* Form Input */

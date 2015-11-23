@@ -10,6 +10,8 @@ var express = require('express'),
 	jade = require('jade'),
 	compression = require('compression'),
 	router = require('./src/http/app-route'),
+	api_router = require('./src/http/api-route'),
+	bodyParser = require('body-parser'),
 	app = express();
 
 // Environment
@@ -29,8 +31,14 @@ app.use(compression({
 // Configure Public Folder
 app.use('/public', express.static('public'));
 
+// URLEncoded parser
+app.use(bodyParser.urlencoded({ 
+	extended: false 
+}));
+
 // Configure Routing
 app.use(router);
+app.use(api_router);
 
 var server = app.listen(server_port, server_ip_address, function() {
 	console.log('Running express server at '+server_ip_address+' on port '+server_port+'...');
