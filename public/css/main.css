@@ -835,4 +835,12 @@ and (max-device-width: 1024px) {
 	.copyright {
 		line-height: 1.65em;
 	}
+
+	#world {
+		display: none;
+	}
+
+	.block-50#contact {
+		position: relative;
+	}
 }
