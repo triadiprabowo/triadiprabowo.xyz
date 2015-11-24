@@ -236,9 +236,10 @@ p, pre {
 }
 
 .head-content-inner h1 {
-	font-size: 2.25em;
+	font-size: 2.1em;
 	color: #E5E5E5;
 	margin-bottom: 8px;
+	text-shadow: 2px 3px 2px rgba(0,0,0,.5);
 }
 
 .head-content-inner h4 {
@@ -342,13 +343,19 @@ img.title {
 	background: rgba(24,24,24,.2);
 }
 
+.content-wrapper#biography .content-inner img.title {
+	margin: 8px 10px 0;
+}
+
 .content-wrapper#biography .content-inner h4 {
+	font-size: 1.45em;
 	color: #eee;
 }
 
 .content-wrapper#biography .content-inner p {
 	color: #ccc;
 	text-align: left;
+	font-size: 1.1em;
 }
 
 .content-wrapper#portfolio {
@@ -363,7 +370,7 @@ img.title {
 }
 
 .content-wrapper#portfolio .content-inner h4 {
-	font-size: 1.6em;
+	font-size: 1.4em;
 }
 
 .content-wrapper#portfolio .content-inner p {
@@ -594,4 +601,34 @@ img.title {
 	font-family: 'Raleway', serif;
 	color: #444;
 	font-weight: bold;
+}
+
+/* 
+** $.tpBacktop() jQuery Plugin
+** CSS Styling Version 1.0
+** Size: Medium;
+** Designed by Triadi Prabowo
+*/
+#tp-backtop {
+	border-radius: 7px;
+	padding: 10px 15px;
+	line-height: 1em;
+	position: fixed;
+	display: block;
+	bottom: 20px;
+	right: 40px;
+	background: rgba(50,50,50,.4);
+	box-shadow: 2px 2px 1px 1px rgba(0,0,0,.4);
+	-webkit-transition: background 0.3s ease-in-out;
+	-moz-transition: background 0.3s ease-in-out;
+	transition: background 0.3s ease-in-out;
+	font-size: 1.25em;
+	color: #e2e2e2;
+	z-index: 100;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	text-align: center;
 }

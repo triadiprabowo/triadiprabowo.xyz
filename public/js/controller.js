@@ -4,6 +4,9 @@
 ** Developed by Triadi Prabowo
 */
 
+// Init function
+tpBackTop();
+
 $('#btn-submit-contact').click(function() {
 	var email = $('#f_email').val();
 	var fullname = $('#f_fullname').val();
@@ -37,3 +40,34 @@ $('#btn-submit-contact').click(function() {
 		}
 	}
 });
+
+function tpBackTop() {
+	$(document).ready(function() {
+		if($('#tp-backtop').length == 0) {
+			var content = '<div id=tp-backtop class=hvr-pulse>&#x2b06;</div>';
+			$('body').append(content);
+			$('#tp-backtop').hide();
+		}
+
+		$('#tp-backtop').click(function() {
+			$('html, body').animate({
+	        	scrollTop: $('body').offset().top
+	    	}, 800);
+		});
+	});
+	$(window).scroll(function() {
+		$this = $(this);
+		
+		if($this.scrollTop() > 200) {
+			$('#tp-backtop').show("slide", {
+				direction: "up"
+			}, 200);
+		}	
+
+		else if($this.scrollTop() < 200) {
+			$('#tp-backtop').hide("slide", {
+				direction: "down"
+			}, 100);
+		}
+	});
+}
