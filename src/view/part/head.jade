@@ -3,7 +3,14 @@ html(lang='en')
 	head
 		meta(name='description', content!= page.description)
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
-		meta(content='utf-8',http-equiv='encoding')   
+		meta(content='utf-8',http-equiv='encoding') 
+		meta(property='og:site_name', content="Welcome to triadiprabowo's XYZ")
+		meta(property='og:title', content!= page.title)
+		meta(property='og:description', content!= page.description)
+		meta(property='og:image', content='./public/img/headbg3.jpg')
+		meta(property='og:type', content='website')
+		meta(name='author', 'content='Triadi Prabowo')
+		meta(charset='UTF-8')
 		title!= page.title
 		link(rel='shortcut icon', href='./public/img/favicon.png')
 		// Core Modules
