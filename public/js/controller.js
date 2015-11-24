@@ -44,7 +44,7 @@ $('#btn-submit-contact').click(function() {
 function tpBackTop() {
 	$(document).ready(function() {
 		if($('#tp-backtop').length == 0) {
-			var content = '<div id=tp-backtop class=hvr-pulse>&#x2b06;</div>';
+			var content = '<div id=tp-backtop class=hvr-pulse>&#9650;</div>';
 			$('body').append(content);
 			$('#tp-backtop').hide();
 		}
@@ -71,3 +71,17 @@ function tpBackTop() {
 		}
 	});
 }
+
+/* Mobile Menu Toggle Clicked */
+$('.m-menu-toggle').click(function(e) {
+	$('.m-head-nav').slideToggle(250);
+	$('.m-menu-toggle').hide();
+	e.stopPropagation();
+});
+
+$(document).click(function() {
+	if($('.m-menu-toggle').is(':hidden')) {
+		$('.m-head-nav').slideToggle(250);
+		$('.m-menu-toggle').show();
+	}
+});
