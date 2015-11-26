@@ -12,6 +12,7 @@ var express = require('express'),
 	router = require('./src/http/app-route'),
 	api_router = require('./src/http/api-route'),
 	bodyParser = require('body-parser'),
+	ghAPI = require('./src/http/github-api'),
 	app = express();
 
 // Environment
@@ -39,6 +40,7 @@ app.use(bodyParser.urlencoded({
 // Configure Routing
 app.use(router);
 app.use(api_router);
+app.use(ghAPI);
 
 var server = app.listen(server_port, server_ip_address, function() {
 	console.log('Running express server at '+server_ip_address+' on port '+server_port+'...');

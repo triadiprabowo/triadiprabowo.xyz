@@ -36,7 +36,7 @@ $('#btn-submit-contact').click(function() {
 				error: function(data) {
 					// DO NOTHING
 				}
-			})
+			});
 		}
 	}
 });
@@ -84,4 +84,23 @@ $(document).click(function() {
 		$('.m-head-nav').slideToggle(250);
 		$('.m-menu-toggle').show();
 	}
+});
+
+$(document).ready(function() {
+	$.ajax({
+		url: './api/github/me/repos',
+		method: 'GET',		
+		success: function(data) {
+			var returnedData = [];
+
+			for(var i=0; i < data.length; i++) {
+				if(data[i].owner.login != 'buzzteam') {					
+					$('#repos-list').append('<li>'+data[i].name+'</li>');
+				}				
+			}
+		},
+		error: function(data) {
+			// DO NOTHING
+		}
+	});
 });

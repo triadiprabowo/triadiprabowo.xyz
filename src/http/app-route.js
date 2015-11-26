@@ -32,5 +32,14 @@ module.exports = (function(req, res) {
 		});
 	});
 
+	router.get('/project', function(req, res) {
+		res.render('project', {
+			page: {
+				description: 'Public personal project repositories, releases and in-development. Coded with latest technologies and methods',
+				title: 'My Project XYZ'
+			}
+		});
+	});
+
 	return router;
 })();
