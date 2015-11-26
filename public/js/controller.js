@@ -4,9 +4,6 @@
 ** Developed by Triadi Prabowo
 */
 
-// Init function
-tpBackTop();
-
 $('#btn-submit-contact').click(function() {
 	var email = $('#f_email').val();
 	var fullname = $('#f_fullname').val();
@@ -42,19 +39,18 @@ $('#btn-submit-contact').click(function() {
 });
 
 function tpBackTop() {
-	$(document).ready(function() {
-		if($('#tp-backtop').length == 0) {
-			var content = '<div id=tp-backtop class=hvr-pulse>&#9650;</div>';
-			$('body').append(content);
-			$('#tp-backtop').hide();
-		}
+	if($('#tp-backtop').length == 0) {
+		var content = '<div id=tp-backtop class=hvr-pulse>&#9650;</div>';
+		$('body').append(content);
+		$('#tp-backtop').hide();
+	}
 
-		$('#tp-backtop').click(function() {
-			$('html, body').animate({
-	        	scrollTop: $('body').offset().top
-	    	}, 800);
-		});
+	$('#tp-backtop').click(function() {
+		$('html, body').animate({
+        	scrollTop: $('body').offset().top
+    	}, 800);
 	});
+
 	$(window).scroll(function() {
 		$this = $(this);
 		
@@ -87,15 +83,18 @@ $(document).click(function() {
 });
 
 $(document).ready(function() {
+	// Init function
+	tpBackTop();
+
 	$.ajax({
 		url: './api/github/me/repos',
 		method: 'GET',		
 		success: function(data) {
-			var returnedData = [];
+			$('#menu-loading').hide();
 
 			for(var i=0; i < data.length; i++) {
 				if(data[i].owner.login != 'buzzteam') {					
-					$('#repos-list').append('<li>'+data[i].name+'</li>');
+					$('#repos-list').append('<li><a href='+data[i].svn_url+'>'+data[i].name+'</a></li>');
 				}				
 			}
 		},

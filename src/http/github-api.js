@@ -9,12 +9,11 @@ var github = require('octonode'),
 	express = require('express');
 
 // Client Module(s)
-var client = github.client('a38d11818d881b785e60881777aee8c3f62d30b2'),
+var client = github.client('26046a8fd02d42a1e7843f40b2e3c70c4bb860c2'),
 	ghuser = client.user('triadiprabowo'),
 	ghme = client.me();
 
 module.exports = (function() {
-
 	var gitRouter = express.Router();
 
 	// GET: user info, repositories info and self info
